@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1059669654609",
+    "project_id": "buzzit-8f693",
+    "storage_bucket": "buzzit-8f693.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059669654609:android:90eba6506e31090fe50c70",
+        "android_client_info": {
+          "package_name": "com.crossplat.buzzit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059669654609-eq8h3jhakmfdgn159ihaj5mjr4imc8v4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crossplat.buzzit",
+            "certificate_hash": "3f3b05b35b0c5fd4ba15d054c6214b193bbe3189"
+          }
+        },
+        {
+          "client_id": "1059669654609-kgotg8qshcgndn4dijri1s2otui3brcc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkZAPzcccFxe-z_jcvOXMgtI5wy39ReyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059669654609-kgotg8qshcgndn4dijri1s2otui3brcc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
