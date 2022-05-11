@@ -1,9 +1,15 @@
 import 'package:buzzit/google_auth.dart';
+
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
 
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +18,6 @@ class SignInPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
-            mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
@@ -34,7 +39,7 @@ class SignInPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headline4,
                 ),
-              )
+              ),
             ],
           ),
         ),

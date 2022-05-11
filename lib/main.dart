@@ -1,10 +1,13 @@
+import 'package:buzzit/homepage.dart';
 import 'package:buzzit/signinpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
@@ -26,7 +29,6 @@ class MyApp extends StatelessWidget {
     },
   );
   static const int _myColorPrimaryValue = 0xFF8e1f56;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -76,7 +78,45 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const SignInPage(),
+      home: const MyHomePage(),
     );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  getdata() async {
+    final prefs = await SharedPreferences.getInstance();
+    String? ps = prefs.getString('name');
+    if (ps != null) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const Homepage(),
+        ),
+      );
+    } else {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const SignInPage(),
+        ),
+      );
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getdata();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox();
   }
 }
