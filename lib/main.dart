@@ -16,26 +16,25 @@ class MyApp extends StatelessWidget {
   static const MaterialColor myColor = MaterialColor(
     _myColorPrimaryValue,
     <int, Color>{
-      50: Color(0xfff4e9ee),
-      100: Color(0xffe8d2dd),
-      200: Color(0xFFd2a5bb),
-      300: Color(0xFFbb799a),
-      400: Color(0xFFa54c78),
-      500: Color(0xFF8e1f56),
-      600: Color(0xFF721945),
-      700: Color(0xFF551334),
-      800: Color(0xFF390c22),
-      900: Color(0xFF1c0611),
+      50: Color(0xFFf6eaec),
+      100: Color(0xFFe5bfc5),
+      200: Color(0xFFd4959f),
+      300: Color(0xFFc36b78),
+      400: Color(0xFFb24051),
+      500: Color(0xFFa92b3e),
+      600: Color(0xFF872232),
+      700: Color(0xFF441119),
+      800: Color(0xFF22090c),
+      900: Color(0xFF110406),
     },
   );
-  static const int _myColorPrimaryValue = 0xFF8e1f56;
+  static const int _myColorPrimaryValue = 0xFFa92b3e;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: myColor,
-        iconTheme: IconThemeData(color: myColor.shade600),
         scaffoldBackgroundColor: myColor.shade50,
         cardColor: const Color(0xFFFFFFFF),
         canvasColor: myColor.shade100,

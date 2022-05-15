@@ -34,7 +34,7 @@ void signInWithGoogle(BuildContext context) async {
       };
 
       users.doc(user!.uid).get().then((doc) async {
-        prefs.setString('name', userData['name']!);
+        prefs.setString('name', userData['email']!.split('@').first);
         if (doc.exists) {
           doc.reference.update(userData);
         } else {
