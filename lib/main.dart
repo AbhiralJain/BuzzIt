@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     _myColorPrimaryValue,
     <int, Color>{
       50: Color(0xFFf6eaec),
-      100: Color(0xFFe5bfc5),
+      100: Color(0xFFeed5d8),
       200: Color(0xFFd4959f),
       300: Color(0xFFc36b78),
       400: Color(0xFFb24051),
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           ),
           headline3: TextStyle(
             color: myColor.shade300,
-            fontSize: 15,
+            fontSize: 17,
             fontFamily: 'OpenSans',
             fontWeight: FontWeight.bold,
           ),
@@ -63,17 +63,16 @@ class MyApp extends StatelessWidget {
             fontFamily: 'OpenSans',
             fontWeight: FontWeight.bold,
           ),
-          headline5: TextStyle(
-            color: myColor.shade700,
-            fontSize: 20,
+          headline5: const TextStyle(
+            color: Colors.white,
+            fontSize: 15,
             fontFamily: 'OpenSans',
             fontWeight: FontWeight.bold,
           ),
           headline6: TextStyle(
-            color: myColor.shade700,
+            color: myColor.shade200,
             fontSize: 15,
             fontFamily: 'OpenSans',
-            decoration: TextDecoration.underline,
           ),
         ),
       ),
